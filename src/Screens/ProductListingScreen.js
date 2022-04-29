@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, FlatList, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, FlatList, Image} from 'react-native';
 
-const shoes = require("./src/Assets/images/shoes.jpg");
-const pant = require("./src/Assets/images/genes.jpg");
-const flask = require("./src/Assets/images/flask.jpg");
-const watch = require("./src/Assets/images/watch.jpg");
+const shoes = require('./src/Assets/images/shoes.jpg');
+const pant = require('./src/Assets/images/genes.jpg');
+const flask = require('./src/Assets/images/flask.jpg');
+const watch = require('./src/Assets/images/watch.jpg');
 
 const productList = [
   {
@@ -37,27 +37,48 @@ const productList = [
   },
 ];
 
-const App = () => {
+const ProductListingScreen = () => {
   const renderProductCards = ({item}) => {
     return (
       <View
-        style={{flex: 1, backgroundColor: 'white', margin: 10, padding: 10, borderWidth: 2, borderRadius: 15}}>
-        <Image source={item.imgUrl} style={{height: 200, width: "100%"}} resizeMode={"contain"}/>
-        <Text style={{color: "#000", fontSize: 20}}>{item.name}</Text>
-        <Text style={{color: "#000", fontSize: 15}}>{item.brandName}</Text>
-        <Text style={{color: "#000", fontSize: 25, fontWeight: 'bold'}}>{item.price}</Text>
+        style={{
+          flex: 1,
+          backgroundColor: 'white',
+          margin: 10,
+          padding: 10,
+          borderWidth: 2,
+          borderRadius: 15,
+        }}>
+        <Image
+          source={item.imgUrl}
+          style={{height: 200, width: '100%'}}
+          resizeMode={'contain'}
+        />
+        <Text style={{color: '#000', fontSize: 20}}>{item.name}</Text>
+        <Text style={{color: '#000', fontSize: 15}}>{item.brandName}</Text>
+        <Text style={{color: '#000', fontSize: 25, fontWeight: 'bold'}}>
+          {item.price}
+        </Text>
       </View>
     );
   };
 
   const renderOfferCards = () => {
-    return(
-      <View style={{flex: 1, backgroundColor: 'white', marginVertical: 10, padding: 10, borderRadius: 15 ,justifyContent:'center',alignItems:'center'}}>
-        <Text style={{color: "#000"}} >A new Offer</Text>
+    return (
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'white',
+          marginVertical: 10,
+          padding: 10,
+          borderRadius: 15,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text style={{color: '#000'}}>A new Offer</Text>
       </View>
-
     );
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -92,7 +113,7 @@ const styles = StyleSheet.create({
   appTitle: {
     fontSize: 30,
     fontWeight: 'bold',
-    color: "#000",
+    color: '#000',
   },
   sectionTittle: {
     color: '#000',
@@ -101,4 +122,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default ProductListingScreen;
