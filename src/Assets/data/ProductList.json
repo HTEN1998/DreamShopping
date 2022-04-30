@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Shoes",
+    "brandName": "Nike",
+    "price": "2000",
+    "imgUrl": "https://m.media-amazon.com/images/I/41DWP5eLv3L.jpg",
+    "warentyPeriod": "1 year"
+  },
+  {
+    "id": 2,
+    "name": "Termer Flask",
+    "brandName": "Temp-Wave",
+    "price": "1000",
+    "imgUrl": "https://m.media-amazon.com/images/I/31BZe6Njt+L._SY300_SX300_.jpg",
+    "warentyPeriod": "2 years"
+  },
+  {
+    "id": 3,
+    "name": "Royal Watch",
+    "brandName": "Titan",
+    "price": "1000",
+    "imgUrl": "https://m.media-amazon.com/images/I/51galP7nokL._SY300_SX300_.jpg",
+    "warentyPeriod": "10 months"
+  },
+  {
+    "id": 4,
+    "name": "Denim Genens",
+    "brandName": "Denim",
+    "price": "1000",
+    "imgUrl": "https://m.media-amazon.com/images/I/81dZ97Jc2GL._UX569_.jpg",
+    "warentyPeriod": "1 year"
+  }
+]
