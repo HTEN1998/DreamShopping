@@ -3,12 +3,10 @@ import {
   StyleSheet,
   Text,
   View,
-  FlatList,
   Image,
   TouchableOpacity,
 } from 'react-native';
-
-const shoes = require('../Assets/images/shoes.jpg');
+import PrimaryButton from "../Components/Buttons/PrimaryButton";
 
 const ProductDetailsScreen = ({route, navigation}) => {
   const {product} = route.params;
@@ -37,11 +35,16 @@ const ProductDetailsScreen = ({route, navigation}) => {
           <Text style={styles.productDetailsText}>Rs {product.price}</Text>
         </View>
       </View>
-      <TouchableOpacity
+      <PrimaryButton
+        title={"Buy Now"}
+        containerStyle={styles.primaryButton}
+        onButtonPress={() => navigation.navigate('Home')}
+      />
+      {/* <TouchableOpacity
         style={styles.primaryButton}
         onPress={() => navigation.navigate('Home')}>
         <Text style={styles.primaryButtonText}>Buy Now</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };
@@ -82,12 +85,10 @@ const styles = StyleSheet.create({
   primaryButton: {
     backgroundColor: '#339af0',
     position: 'absolute',
-    bottom: 0,
-    right: 0,
-    left: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 15,
+    bottom: 10,
+    right: 10,
+    left: 10,
+    borderRadius: 30,
   },
   primaryButtonText: {
     color: '#fff',
