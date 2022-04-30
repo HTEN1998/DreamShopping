@@ -9,7 +9,7 @@ const ProductCard = props => {
       style={[styles.card, cardContainerStyle]}
       onPress={onPressCard}>
       <Image
-        source={data.imgUrl}
+        source={{uri: data.imgUrl}}
         style={[styles.productImage, productImageStyle]}
         resizeMode={'contain'}
       />

@@ -9,66 +9,41 @@ import {
 import CouponCard from '../Components/Cards/CouponCard';
 import ProductCard from '../Components/Cards/ProductCard';
 
-const shoes = require('../Assets/images/shoes.jpg');
-const pant = require('../Assets/images/genes.jpg');
-const flask = require('../Assets/images/flask.jpg');
-const watch = require('../Assets/images/watch.jpg');
-
-const couponList = [
-  {
-    id: 1,
-    couponTitle: '20% off upto Rs 100',
-    couponCode: 'Use Rupay100 code',
-    eligibleAmount: 'for Rs 10,000',
-  },
-  {
-    id: 2,
-    couponTitle: '50% off upto Rs 700',
-    couponCode: 'Use Amazon650 code',
-    eligibleAmount: 'for Rs 40,000',
-  },
-  {
-    id: 3,
-    couponTitle: '30% off upto Rs 8000',
-    couponCode: 'Use ZapIt60 code',
-    eligibleAmount: 'for Rs 20,000',
-  },
-];
-
-const productList = [
-  {
-    id: 1,
-    name: 'Nike Shoes',
-    brandName: 'Nike',
-    price: '2000',
-    imgUrl: shoes,
-    warentyPeriod: '1 year',
-  },
-  {
-    id: 2,
-    name: 'Termer Flask',
-    brandName: 'Temp-Wave',
-    price: '1000',
-    imgUrl: flask,
-    warentyPeriod: '2 years',
-  },
-  {
-    id: 3,
-    name: 'Royal Watch',
-    brandName: 'Titan',
-    price: '1000',
-    imgUrl: watch,
-    warentyPeriod: '10 months',
-  },
-  {
-    id: 4,
-    name: 'Denim Genens',
-    brandName: 'Denim',
-    price: '1000',
-    imgUrl: pant,
-    warentyPeriod: '1 year',
-  },
-];
+const couponList = require("../Assets/data/CouponList.json")
+const productList = require("../Assets/data/ProductList.json");
+//   {
+//     id: 1,
+//     name: 'Nike Shoes',
+//     brandName: 'Nike',
+//     price: '2000',
+//     imgUrl: shoes,
+//     warentyPeriod: '1 year',
+//   },
+//   {
+//     id: 2,
+//     name: 'Termer Flask',
+//     brandName: 'Temp-Wave',
+//     price: '1000',
+//     imgUrl: flask,
+//     warentyPeriod: '2 years',
+//   },
+//   {
+//     id: 3,
+//     name: 'Royal Watch',
+//     brandName: 'Titan',
+//     price: '1000',
+//     imgUrl: watch,
+//     warentyPeriod: '10 months',
+//   },
+//   {
+//     id: 4,
+//     name: 'Denim Genens',
+//     brandName: 'Denim',
+//     price: '1000',
+//     imgUrl: pant,
+//     warentyPeriod: '1 year',
+//   },
+// ];
 
 const ProductListingScreen = ({navigation}) => {
   const renderProductCards = ({item}) => {
