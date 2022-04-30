@@ -16,16 +16,19 @@ const watch = require('../Assets/images/watch.jpg');
 
 const couponList = [
   {
+    id: 1,
     couponTitle: '20% off upto Rs 100',
     couponCode: 'Use Rupay100 code',
     eligibleAmount: 'for Rs 10,000',
   },
   {
+    id: 2,
     couponTitle: '50% off upto Rs 700',
     couponCode: 'Use Amazon650 code',
     eligibleAmount: 'for Rs 40,000',
   },
   {
+    id: 3,
     couponTitle: '30% off upto Rs 8000',
     couponCode: 'Use ZapIt60 code',
     eligibleAmount: 'for Rs 20,000',
@@ -89,6 +92,7 @@ const ProductListingScreen = ({navigation}) => {
         {couponList.map(coupon => {
           return (
             <CouponCard
+              key={coupon.id}
               data={coupon}
               cardContainerStyle={{
                 marginVertical: 20,

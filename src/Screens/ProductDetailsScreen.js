@@ -38,13 +38,8 @@ const ProductDetailsScreen = ({route, navigation}) => {
       <PrimaryButton
         title={"Buy Now"}
         containerStyle={styles.primaryButton}
-        onButtonPress={() => navigation.navigate('Home')}
+        onButtonPress={() => navigation.navigate('Dashboard')}
       />
-      {/* <TouchableOpacity
-        style={styles.primaryButton}
-        onPress={() => navigation.navigate('Home')}>
-        <Text style={styles.primaryButtonText}>Buy Now</Text>
-      </TouchableOpacity> */}
     </View>
   );
 };
